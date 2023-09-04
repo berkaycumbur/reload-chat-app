@@ -1,4 +1,7 @@
-/* Can not use sf pro display font because that font special to mac. I am working on windows. */
+/* Can not use sf pro display font because that font special to mac. I am working on windows. 
+But probably when you on your computer you will see default font for mac.
+For mobile i change on the structure but i don't design i did not change the font sizes
+*/
 body {
   background-color: #000000;
 }
@@ -67,13 +70,12 @@ body {
   width: 100%;
   position: absolute;
   height: auto;
- 
 }
 
-.circles .eclipse2{
+.circles .eclipse2 {
   animation: animName 5s linear infinite;
 }
-.circles .eclipse3{
+.circles .eclipse3 {
   animation: animName 3s linear infinite;
 }
 
@@ -89,7 +91,7 @@ body {
   }
 }
 
-.circles .eclipse1{
+.circles .eclipse1 {
   opacity: 0.5 !important;
   animation: animName 7s linear infinite;
 }
@@ -97,7 +99,6 @@ body {
 .circles2 {
   padding-top: 75px;
   opacity: 0.7;
-  
 }
 
 .startChat {
@@ -137,8 +138,8 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transform: rotate(-30deg) skew(25deg) scale(0.8);
-  transition: 0.5s;
+  transform: none
+
 }
 
 .row {
@@ -416,7 +417,70 @@ body {
   opacity: 0.7;
 }
 
-.mainChat{
+.mainChat {
   margin-left: 20px;
   margin-top: 40px;
+}
+
+.chatContainer {
+  position: "relative";
+  height: "800px";
+  width: "700px";
+}
+
+.chatContainer .cs-message-input__content-editor-wrapper {
+  border-radius: 100px;
+  border: 0.966px solid #b6fbff;
+  background: rgba(255, 255, 255, 0.06);
+  width: 100%;
+  height: 80px;
+}
+.chatContainer .cs-message-input__content-editor {
+  color: #ffffff;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 120% */
+  letter-spacing: 0.64px;
+}
+
+@media only screen and (max-width: 768px){
+  .row{
+    flex-direction: column;
+    padding: 80px 20px 80px 20px;
+    align-items: center;
+  }
+  .leftSection{
+    margin-right: 0 !important;
+  }
+  .rightSection{
+    margin-left: 0;
+    margin-top: 80px;
+  }
+  .line{
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 425px){
+  .rightSection{
+    grid-template-columns: repeat(1,1fr);
+  }
+
+  .rightSection img{
+    max-width: 185px;
+  }
+
+  .footerInfo{
+    flex-direction: column;
+  }
+  .footerRight{
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .footerLinks{
+    flex-direction: column;
+  }
+  .footerLinks .links{
+    flex-direction: column;
+  }
 }

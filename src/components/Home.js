@@ -11,7 +11,7 @@ import image3 from "./photos/image-3.png";
 import image4 from "./photos/image-4.png";
 import image5 from "./photos/image-5.png";
 import image6 from "./photos/image-6.png";
-
+// took circles for image for better fitting
 function HeroText() {
   return (
     <div className="heroText">
@@ -69,7 +69,8 @@ function StartChat() {
       <br></br>
       <div className="chatPrevAnimation">
         <img
-          src={chatPreview}
+          src={chatPreview}//applied transform: rotate(-30deg) skew(25deg) scale(0.8);
+          // but can not make it for scrollY so i leave it default
           
           alt="chatpreview"
         />

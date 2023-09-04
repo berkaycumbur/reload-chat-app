@@ -5,6 +5,7 @@ import "./App.css";
 import { BrowserRouter as Router, Routes, Route }
     from 'react-router-dom';
 
+// downloaded react router fot routing
 function App() {
   return (
     <Router>
